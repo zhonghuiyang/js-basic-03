@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <img src="images/01.jpg" alt="">
+    </div>
+
+    <script>
+        /*
+        //冒泡：事件在最里层的标签上触发，再一层一层向上触发，直到最顶层
+        document.querySelector('img').onclick=function(){
+            console.log('1. img的事件触发了')
+        }
+
+        document.querySelector('div').onclick=function(){
+            console.log('2. div的事件触发了');
+        }
+
+        document.body.onclick=function(){
+            console.log('3. body的事件触发了');
+        }
+        */
+
+        //捕捉：事件在最顶层的标签上触发，再一层一层向下触发，直到最里层
+        document.querySelector('img').addEventListener('click', function(){
+            console.log('1. img的事件触发了')
+        }, true)
+
+        document.querySelector('div').addEventListener('click', function(){
+            console.log('2. div的事件触发了');
+        }, true)
+
+        document.body.addEventListener('click', function(){
+            console.log('3. body的事件触发了');
+        }, true)
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 新增节点 -->
+    <button type="button">点我新增</button>
+    <ul>
+        <li>新闻1</li>
+        <li>新闻2</li>
+        <li>新闻3</li>
+        <li>新闻4</li>
+    </ul>
+    <script>
+        var i=4;
+
+        let btn=document.querySelector('button')
+        btn.onclick=function(){
+            // 1.创建新的节点
+            //  let li=document.createElement('li');
+            // li.innerText='新闻'+i;
+            // i++;
+            // console.log(li);
+            // 2.将创建好的标签添加到dom树中
+            let ul=document.querySelector('ul');
+            // 新增节点
+            ul.appendChild(li);
+            li.innerText='新闻'+i;
+            i++;
+            console.log(li);
+            // 删除节点
+            // ul.remove()
+            // 删除自己
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>标题1</h1>
+    <h1>标题2</h1>
+    <h1>标题3</h1>
+    <h1>标题4</h1>
+    <button type="button">点我</button>
+
+    <script>
+        let btn=document.querySelector('button');
+        btn.onclick=function(){
+            //获取所有的标题
+            let h1=document.querySelectorAll('h1');
+            h1.forEach(function(v){
+                v.style.border='2px solid #f00';
+            });
+        }
+    </script>
+</body>
+</html>

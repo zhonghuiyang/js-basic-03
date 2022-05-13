@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+		<!-- 重置样式 -->
+		<link rel="stylesheet" type="text/css" href="../asset/css/normalize.css"/>
+		<!-- 公共样式 -->
+		<link rel="stylesheet" type="text/css" href="../asset/css/common.css"/>
+		<!-- 当前页面样式 -->
+		<link rel="stylesheet" href="../asset/css/login.css">
+	</head>
+	<body>
+		<div class="login-content">
+			<div class="login-left">
+				<a href="index.html"><img src="../asset/imgs/login-bg.png" alt=""></a>
+			</div>
+			<div class="login-right">
+				<div class="login-main">
+					<img src="../asset/imgs/loginlogo.png" class="login-main-logo">
+					<p class="login-main-title">
+						<span class="login-main-title1 on login-tab">账号登录</span>
+						<span class="login-main-title2"></span>
+						<span class="login-main-title3 login-tab">扫码登录</span>
+					</p>
+					<!-- 登录盒子 -->
+					<div class="form-content login-box">
+						<form action="index.html" method="GET">
+							<p class="user-input">
+								<input type="text" id="user" placeholder="用户名/手机号/邮箱">
+								<img src="../asset/imgs/clearInput.png">
+							</p>
+							<p class="user-error">
+								<span class="user-icon"></span>
+								<span class="content-error">请输入正确的用户名</span>
+							</p>
+				
+							<p class="pwd-input">
+								<input type="password" id="pwd" placeholder="密码">
+								<img src="../asset/imgs/clearInput.png">
+							</p>
+							<p class="pwd-error">
+								<span class="user-icon"></span>
+								<span class="content-error">请输入正确的密码</span>
+							</p>
+							<a href="#" class="forget-pwd">忘记密码</a>
+							<button type="submit" id="loginbtn">登录</button>
+							<p class="no-account">
+								<span>还没有源码账号，</span>
+								<a href="register.html">立即注册</a>
+								<span class="no-account-icon"></span>
+							</p>
+						</form>
+					</div>
+					<!-- 扫码盒子 -->
+					<div class="qrcode login-box">
+						<div class="qrcode-top">
+							<img src="../asset/imgs/showqrcode.jpg">
+							<p>微信扫码登录</p>
+							<p>未关注源码科技公众号，请先关注后再登录</p>
+						</div>
+				
+						<p class="no-account">
+							<span>还没有源码账号，</span>
+							<a href="register.html">立即注册</a>
+							<span class="no-account-icon"></span>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	<!-- 引入公共方法 -->
+	<script src="../asset/js/common.js"></script>
+	<!-- 引入当前页面js -->
+	<script src="../asset/js/login.js"></script>
+	</body>
+</html>

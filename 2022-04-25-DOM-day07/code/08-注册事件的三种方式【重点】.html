@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 1. 在标签上注册事件 -->
+    <h1 onclick="show();">Hello world !!!</h1>
+
+    <!-- 2. DOM对象注册事件 -->
+    <h2>Hello world !!!</h2>
+
+    <!-- 3. W3C标准方法注册事件 -->
+    <h3>Hello world !!!</h3>
+
+    <script>
+        //1.1 事件处理函数
+        function show(){
+            console.log('1.标签上注册事件触发了');
+        }
+
+        //2.1 DOM对象上绑定事件
+        let h2=document.querySelector('h2');
+        h2.onclick=function(){
+            console.log('2.DOM对象上的事件触发了');
+        }
+
+        //3.1 W3C标准方法注册事件
+        let h3=document.querySelector('h3');
+        h3.addEventListener('click', function(){
+            console.log('3.W3C标准方法注册事件触发了');
+        });
+    </script>
+</body>
+</html>

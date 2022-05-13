@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            color:#00f;
+            font-size:50px;
+            background:#000;
+        }
+    </style>
+</head>
+<body>
+    <h1>今天发生一件大事，不上晚自习</h1>
+
+    <script>
+        let h1=document.querySelector('h1');
+        h1.onclick=function(){
+            //1. style行内样式
+            //h1.style.color='#f00';
+            //h1.style.fontSize='60px'; //所有CSS中带 - 统一改成驼峰命名法
+
+            //2. className类名操作
+            h1.className='box';
+        }
+    </script>
+</body>
+</html>

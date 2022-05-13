@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <h1>新闻列表</h1>
+        <ul class="list">
+            <li>新闻2</li>
+            <li>新闻3</li>
+            <li>新闻4</li>
+            <li>新闻5</li>
+
+        </ul>
+        <h2>其他新闻</h2>
+    </section>
+    <script>
+        let list=document.querySelector('.list');
+        console.log(list);
+        console.log(list.parentNode);
+        console.log(list.childNodes);
+        // 文本节点  空格算文本节点  
+        console.log(list.children);
+        // 只包含元素节点
+        console.log(list.previousElementSibling);
+        // 上一个兄弟节点
+        // previousElementsibling 找上一个兄弟节点
+        // previoussibling  找上一个 会算文本节点
+    </script>
+    
+</body>
+</html>

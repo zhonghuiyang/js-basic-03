@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1. 实例化方式
+        let car1=new Object();
+        car1.color='红色';
+        car1.price='3块';
+        car1.brand='法拉利';
+        car1.start=function(){
+            console.log('启不动');
+        };
+        car1.brake=function(){
+            console.log('刹不住');
+        }
+
+        console.log( car1 );
+
+        //2. 字面量方式
+        let car2={
+            color:'黑色',
+            price:'4块',
+            brand:'BMW',
+            start:function(){
+                console.log('启不动');
+            },
+            brake:function(){
+                console.log('刹不住');
+            }, 
+        }
+
+        console.log( car2 );
+    </script>
+</body>
+</html>

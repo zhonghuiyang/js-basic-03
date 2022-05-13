@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>今天<em>星期六</em></h1>
+    <script>
+        let h1=document.querySelector('h1');
+        console.log(h1);
+        h1.onclick=function(){
+            console.log(111);
+            // console.log(h1.innerText);
+            // innerText 只读文本
+            console.log(h1.innerHTML);
+            // innerHTML读格式
+            h1.innerHTML='明天<big>星期</big>天'
+            // html会解析big
+            // 3.textcontent 和innertext一样  不过支持文本节点
+            console.log(h1.textContent);
+        }
+    </script>
+</body>
+</html>

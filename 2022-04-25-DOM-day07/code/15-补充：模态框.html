@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #mask{
+            position:fixed;
+            left:0;
+            top:0;
+            width:100%;
+            height:100%;
+            background:rgba(0,0,0,0.5);
+            display:none;
+        }
+
+        #box{
+            position:fixed;
+            left:50%;
+            margin-left:-200px;
+            top:50%;
+            margin-top:-150px;
+            width:400px;
+            height:300px;
+            background:#fff;
+            display:none;
+        }
+
+        #closeBtn{
+            position:absolute;
+            right:0;
+            top:0;
+            width:20px;
+            height:20px;
+
+            background:#f00;
+            color:#fff;
+            text-align:center;
+            line-height:20px;
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body>
+    <button type="button" id="showBtn">点我</button>
+
+    <div id="mask"></div>
+    <div id="box">
+        <span id="closeBtn">x</span>
+        <h1>我是一个大标题，我就很牛B</h1>
+    </div>
+    
+    <h1>今天星期一</h1>
+    <h1>今天星期一</h1>
+    <h1>今天星期一</h1>
+    <h1>今天星期一</h1>
+    <h1>今天星期一</h1>
+    <h1>今天星期一</h1>
+
+    <script>
+        let showBtn=document.querySelector('#showBtn');
+        let mask=document.querySelector('#mask');
+        let box=document.querySelector('#box');
+        let closeBtn=document.querySelector('#closeBtn');
+
+        showBtn.onclick=function(){
+            mask.style.display='block';
+            box.style.display='block';
+        }
+
+        closeBtn.onclick=function(){
+            mask.style.display='none';
+            box.style.display='none';
+        }
+
+    </script>
+</body>
+</html>

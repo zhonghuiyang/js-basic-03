@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 1.事件触发 -->
+     <!-- <h1>ccxxcvc</h1>
+     <script>
+         let h1=document.querySelector('h1');
+         h1.onclick=function(){
+             console.log('触发使用');
+         }
+     </script> -->
+
+
+
+     <!-- 2.第二种事件触发 -->
+     <!-- <h1 onclick="show()"></h1>
+     <script>
+         function show(){
+             console.log('触发事件');
+         }
+        </script> -->
+
+        <!-- //  3.W3C标准方法注册事件的触发 -->
+        <!-- <script>
+         let h3=document.querySelector('h3');
+         h3.addEventListener('click',function(){
+             console.log('W3C标准方法注册事件的触发');
+
+         })
+        </script>
+    -->
+    <!-- 4.常用事件
+    a. 鼠标类
+    click   点击事件
+    mouseover  移入事件
+    mouseout   移出事件 -->
+    <!-- b. 键盘类 -->
+    <!-- keydown  键盘按下 -->
+    <!-- c.表单类
+    submit  提交事件
+    input   输入事件
+    blur     失去焦点事件
+    change    改变事件
+    d.窗口类
+    load  窗口加载事件 -->
+    <!-- scroll  滚动条滚动事件 -->
+    <style>
+        .box{
+            width:300px;
+            height: 100px;
+            background-color: aquamarine;
+        }
+    </style>
+    <div class="box"></div>
+    <script>
+        let box=document.querySelector('.box');
+        box.onclick=function(){
+            box.style.background='#0a0';
+        }
+        
+        box.onmouseout=function(){
+            box.style.background='#00f';
+        }
+        
+        box.onmouseover=function(){
+            box.style.background='#f0f';
+        }
+    </script>
+
+
+</body>
+</html>

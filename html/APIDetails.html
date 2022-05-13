@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<!-- 重置样式 -->
+		<link rel="stylesheet" type="text/css" href="../asset/css/normalize.css"/>
+		<!-- 公共样式 -->
+		<link rel="stylesheet" type="text/css" href="../asset/css/common.css"/>
+		<!-- 当前页面样式 -->
+		<link rel="stylesheet" href="../asset/css/APIDetails.css">
+	</head>
+	<body>
+		<!-- 头部 -->
+		<header class="head clearfix">
+			<a href="index.html" class="head-logo fl">
+				<img src="../asset/imgs/api-new-logo-white.png">
+			</a>
+			<nav class="head-nav fl">
+				<a href="index.html">首页</a>
+				<a href="API.html" class="head-nav-on">API</a>
+				<a href="case.html">案例</a>
+			</nav>
+			<div class="head-login fr">
+				<a href="login.html" class="login">登录</a>
+				<a href="register.html" class="register">注册有礼</a>
+			</div>
+		</header>
+		<!-- 粒子效果图 -->
+		<section class="banner">
+			<div id="mydiv" style="height:270px;"></div>
+			<div class="banner-content clearfix">
+				<div class="banner-content-left fl">
+					<img src="../asset/imgs/API11.jpg">
+					<p class="banner-icon">
+						<img src="../asset/imgs/API_smallicon_01.jpg">
+						<img src="../asset/imgs/API_smallicon_02.jpg">
+						<img src="../asset/imgs/API_smallicon_03.jpg">
+					</p>
+					<p class="banner-num">
+						<span>103</span>
+						<span>14245</span>
+						<span>623</span>
+					</p>
+				</div>
+				<div class="banner-content-right fl">
+					<p class="right-one clearfix">
+						<span class="right-one-title">身份证实名认证</span>
+						<span class="right-one-span">支持HTTPS</span>
+						<span class="right-one-span">企业专用</span>
+					</p>
+					<p class="right-two">
+						<img src="../asset/imgs/API03.jpg">
+						<span>限企业实名用户使用</span>
+						<img src="../asset/imgs/API08.jpg">
+						<span>本接口需提供应用场景审核</span>
+						<img src="../asset/imgs/API05.jpg">
+						<span>个人实名用户无法使用</span>
+					</p>
+					<p class="right-three">检测姓名和身份证号是否一致，身份证验证。</p>
+					<div class="right-four clearfix">
+						<p class="right-four-qrcode fl">
+							<img src="../asset/imgs/API17.jpg">
+							<span class="qrcode">
+								扫码测试
+								<em class="qrcode-img">
+									<img src="../asset/imgs/103-demo.png">
+								打开微信扫一扫
+								</em>
+							</span>
+						</p>
+						<p class="right-four-title fl">
+						</p>
+
+					</div>
+					<p class="right-five">
+						<span class="right-five-price">¥1200</span>
+						(约
+						<span class="right-five-price1">0.3000</span>
+						元/次),仅限企业实名购买;
+					</p>
+					<p class="right-six">
+						<button>立即申请</button>
+					</p>
+				</div>
+			</div>
+		</section>
+		<!-- API文档 -->
+		<section class="document">
+			<!-- 导航栏 -->
+			<div class="document-nav">
+				<p class="document-nav-title container">
+					<span class="nav-title-on">API文档</span>
+					<span>错误码参照</span>
+					<span>示例代码</span>
+					<span>联系我们</span>
+				</p>
+			</div>
+			<!-- 文档内容 -->
+			<div class="document-content container clearfix">
+				<!-- 左边内容 -->
+				<div class="document-content-left fl">
+					<!-- api文档 -->
+					<div class="document-API document-list">
+						<p>
+							<strong>接口地址:</strong>
+							<span> http://op.itsource.cn/idcard/query</span>
+						</p>
+						<p>
+							<strong>返回格式:</strong>
+							<span> json</span>
+						</p>
+						<p>
+							<strong>请求方式:</strong>
+							<span>http get/post</span>
+						</p>
+						<p>
+							<strong>请求示例</strong>
+							<span> http://op.itsource.cn/idcard/query?key=您申请的KEY&idcard=&realname=</span>
+						</p>
+						<p>
+							<strong>接口备注:</strong>
+							<span>error_code为0时计费</span>
+						</p>
+						<p>
+							<button>API测试工具</button>
+						</p>
+						<h4>请求参数说明:</h4>
+						<table>
+							<tr>
+								<th>名称</th>
+								<th>必填</th>
+								<th>类型</th>
+								<th>说明</th>
+							</tr>
+							<tr>
+								<td>idcard</td>
+								<td>是</td>
+								<td>string</td>
+								<td>身份证号码</td>
+							</tr>
+							<tr>
+								<td>realname</td>
+								<td>是</td>
+								<td>string</td>
+								<td>姓名(UTF-8)</td>
+							</tr>
+							<tr>
+								<td>orderid</td>
+								<td>否</td>
+								<td>int</td>
+								<td>传1时返回单号，默认不返回单号(建议传入)</td>
+							</tr>
+							<tr>
+								<td>key</td>
+								<td>是</td>
+								<td>string</td>
+								<td>在个人中心->我的数据,接口名称上方查看</td>
+							</tr>
+						</table>
+						<h4>返回参数说明:</h4>
+						<table>
+							<tr>
+								<th>名称</th>
+								<th>类型</th>
+								<th>说明</th>
+							</tr>
+							<tr>
+								<td>error_code</td>
+								<td>int</td>
+								<td>返回码</td>
+							</tr>
+							<tr>
+								<td>realname</td>
+								<td>是</td>
+								<td>string</td>
+							</tr>
+							<tr>
+								<td>reason</td>
+								<td>string</td>
+								<td>返回说明</td>
+							</tr>
+							<tr>
+								<td>result</td>
+								<td>object</td>
+								<td>返回结果集</td>
+							</tr>
+							<tr>
+								<td>realname</td>
+								<td>string</td>
+								<td>属result,真实姓名</td>
+							</tr>
+							<tr>
+								<td>idcard</td>
+								<td>string</td>
+								<td>属result,身份证号</td>
+							</tr>
+							<tr>
+								<td>res</td>
+								<td>int</td>
+								<td>属result,匹配详情,1匹配,2不匹配</td>
+							</tr>
+						</table>
+						<h4 class="tool">
+							JSON返回示例:
+							<span class="tool-span">
+							JSON在线格式化工具
+							</span>
+						</h4>
+						<div class="example">
+							<p>{</p>
+							<p class="tindent10"> "reason": "成功",</p>
+							<p class="tindent10"> "result": {</p>
+							<p class="tindent10"> "realname": "***",/*真实姓名*/</p>
+							<p class="tindent10"> "idcard": "******************",/*身份证号码*/</p>
+							<p class="tindent10"> "orderid":"J103202010151450419556",/*流水号*/</p>
+							<p class="tindent10"> "res": 1 /*1：匹配 2：不匹配*/</p>
+							<p class="tindent10"> },</p>
+							<p class="tindent10">"error_code": 0</p>
+							<p> }</p>
+						</div>
+					</div>
+					<!-- 错误码参照内容 -->
+					<div class="document-error document-list">
+						<h4>请求参数说明:</h4>
+						<table>
+							<tr>
+								<th>名称</th>
+								<th>必填</th>
+								<th>类型</th>
+								<th>说明</th>
+							</tr>
+							<tr>
+								<td>idcard</td>
+								<td>是</td>
+								<td>string</td>
+								<td>身份证号码</td>
+							</tr>
+							<tr>
+								<td>realname</td>
+								<td>是</td>
+								<td>string</td>
+								<td>姓名(UTF-8)</td>
+							</tr>
+							<tr>
+								<td>orderid</td>
+								<td>否</td>
+								<td>int</td>
+								<td>传1时返回单号，默认不返回单号(建议传入)</td>
+							</tr>
+							<tr>
+								<td>key</td>
+								<td>是</td>
+								<td>string</td>
+								<td>在个人中心->我的数据,接口名称上方查看</td>
+							</tr>
+						</table>
+						<h4>返回参数说明:</h4>
+						<table>
+							<tr>
+								<th>名称</th>
+								<th>类型</th>
+								<th>说明</th>
+							</tr>
+							<tr>
+								<td>error_code</td>
+								<td>int</td>
+								<td>返回码</td>
+							</tr>
+							<tr>
+								<td>realname</td>
+								<td>是</td>
+								<td>string</td>
+							</tr>
+							<tr>
+								<td>reason</td>
+								<td>string</td>
+								<td>返回说明</td>
+							</tr>
+							<tr>
+								<td>result</td>
+								<td>object</td>
+								<td>返回结果集</td>
+							</tr>
+							<tr>
+								<td>realname</td>
+								<td>string</td>
+								<td>属result,真实姓名</td>
+							</tr>
+							<tr>
+								<td>idcard</td>
+								<td>string</td>
+								<td>属result,身份证号</td>
+							</tr>
+							<tr>
+								<td>res</td>
+								<td>int</td>
+								<td>属result,匹配详情,1匹配,2不匹配</td>
+							</tr>
+						</table>
+						<h4 class="tool">
+							JSON返回示例:
+							<span class="tool-span">
+							JSON在线格式化工具
+							</span>
+						</h4>
+						<div class="example">
+							<p>{</p>
+							<p class="tindent10"> "reason": "成功",</p>
+							<p class="tindent10"> "result": {</p>
+							<p class="tindent10"> "realname": "***",/*真实姓名*/</p>
+							<p class="tindent10"> "idcard": "******************",/*身份证号码*/</p>
+							<p class="tindent10"> "orderid":"J103202010151450419556",/*流水号*/</p>
+							<p class="tindent10"> "res": 1 /*1：匹配 2：不匹配*/</p>
+							<p class="tindent10"> },</p>
+							<p class="tindent10">"error_code": 0</p>
+							<p> }</p>
+						</div>
+					</div>
+					<!-- 示例代码 -->
+					<div class="document-example document-list">
+						<h4 class="tool">
+							JSON返回示例:
+							<span class="tool-span">
+							JSON在线格式化工具
+							</span>
+						</h4>
+						<div class="example">
+							<p>{</p>
+							<p class="tindent10"> "reason": "成功",</p>
+							<p class="tindent10"> "result": {</p>
+							<p class="tindent10"> "realname": "***",/*真实姓名*/</p>
+							<p class="tindent10"> "idcard": "******************",/*身份证号码*/</p>
+							<p class="tindent10"> "orderid":"J103202010151450419556",/*流水号*/</p>
+							<p class="tindent10"> "res": 1 /*1：匹配 2：不匹配*/</p>
+							<p class="tindent10"> },</p>
+							<p class="tindent10">"error_code": 0</p>
+							<p> }</p>
+						</div>
+					</div>
+					<!-- 联系我们 -->
+					<div class="document-contactus document-list">
+						<table>
+							<tr>
+								<th>内容</th>
+								<th>详细</th>
+							</tr>
+							<tr>
+								<td>售前咨询①</td>
+								<td>0512-88869195</td>
+							</tr>
+							<tr>
+								<td>客服热线</td>
+								<td>400-882-7715</td>
+							</tr>
+							<tr>
+								<td>在线客服QQ</td>
+								<td>800076065</td>
+							</tr>
+							<tr>
+								<td>接口测试</td>
+								<td>API测试工具</td>
+							</tr>
+						</table>
+					</div>
+				</div>		
+				<!-- 右边内容 -->
+				<div class="document-content-right fr">
+					<h3>活动推荐/Activity</h3>
+					<p><img src="../asset/imgs/sfz-aside1.png"></p>
+					<p><img src="../asset/imgs/details-aside02.png"></p>
+					<p><img src="../asset/imgs/details-aside03.png"></p>
+					<h3>猜你喜欢</h3>
+					<p class="like clearfix">
+						<a class="fl"><img src="../asset/imgs/API22.jpg"></a>
+						<span class="fl">
+							<strong>短信API服务</strong>
+							<em>三网合一短信通道，验证码</em>
+						</span>
+					</p>
+					<p class="like clearfix">
+						<a class="fl"><img src="../asset/imgs/API26.jpg"></a>
+						<span class="fl">
+							<strong>短信API服务</strong>
+							<em>三网合一短信通道，验证码</em>
+						</span>
+					</p>
+					<p class="like clearfix">
+						<a class="fl"><img src="../asset/imgs/API30.jpg"></a>
+						<span class="fl">
+							<strong>短信API服务</strong>
+							<em>三网合一短信通道，验证码</em>
+						</span>
+					</p>
+					<p class="like clearfix">
+						<a class="fl"><img src="../asset/imgs/API33.jpg"></a>
+						<span class="fl">
+							<strong>短信API服务</strong>
+							<em>三网合一短信通道，验证码</em>
+						</span>
+					</p>
+					<p class="like clearfix">
+						<a class="fl"><img src="../asset/imgs/API36.jpg"></a>
+						<span class="fl">
+							<strong>三网手机实名制认证</strong>
+							<em>三网合一短信通道，验证码短信 · 系统通知 · 活动通知</em>
+						</span>
+					</p>
+				</div>
+			</div>
+
+		</section>
+		<!-- 现在注册 -->
+		<section class="now-register">
+			<p>现在注册，百款接口免费测试</p>
+			<a href=""><button>免费注册</button></a>
+		</section>
+		<!-- 底部 -->
+		<footer class="footer container">
+				<div class="foot-list clearfix">
+					<dl class="foot-list1 fl">
+						<dt>联系与支持</dt>
+						<dd><a href="#">400-882-7715</a></dd>
+						<dd><a href="#">售前咨询</a></dd>
+						<dd><a href="#">客服&售后</a></dd>
+						<dd><a href="#">常见问题</a></dd>
+						<dd><a href="#">极速工单</a></dd>
+						<dd><a href="#">投诉与建议</a></dd>
+					</dl>
+					<dl class="foot-list1 fl">
+						<dt>关于源码</dt>
+						<dd><a href="#">400-882-7715</a></dd>
+						<dd><a href="#">售前咨询</a></dd>
+						<dd><a href="#">客服&售后</a></dd>
+						<dd><a href="#">常见问题</a></dd>
+						<dd><a href="#">极速工单</a></dd>
+						<dd><a href="#">投诉与建议</a></dd>
+					</dl>	
+					<dl class="foot-list1 fl">
+						<dt>快速入口</dt>
+						<dd><a href="#">400-882-7715</a></dd>
+						<dd><a href="#">售前咨询</a></dd>
+						<dd><a href="#">客服&售后</a></dd>
+						<dd><a href="#">常见问题</a></dd>
+						<dd><a href="#">极速工单</a></dd>
+						<dd><a href="#">投诉与建议</a></dd>
+					</dl>	
+					<dl class="foot-list1 fl">
+						<dt>产品服务</dt>
+						<dd><a href="#">400-882-7715</a></dd>
+						<dd><a href="#">售前咨询</a></dd>
+						<dd><a href="#">客服&售后</a></dd>
+						<dd><a href="#">常见问题</a></dd>
+						<dd><a href="#">极速工单</a></dd>
+						<dd><a href="#">投诉与建议</a></dd>
+					</dl>	
+					<dl class="foot-list1 fl">
+						<dt>解决方案</dt>
+						<dd><a href="#">400-882-7715</a></dd>
+						<dd><a href="#">售前咨询</a></dd>
+						<dd><a href="#">客服&售后</a></dd>
+						<dd><a href="#">常见问题</a></dd>
+						<dd><a href="#">极速工单</a></dd>
+						<dd><a href="#">投诉与建议</a></dd>
+					</dl>	
+					<div class="fr">
+						<p class="wechat">微信公众号</p>
+						<p class="wechat-name">源码时代</p>
+						<img src="../asset/imgs/wechat-white.png">
+					</div>
+				</div>
+				<p class="foot-last">
+					<a href=""><img src="../asset/imgs/bei1.png"></a>
+					<a href=""><img src="../asset/imgs/bei2.png"></a>
+					<span>增值电信业务经营许可证：蜀B2-20180596</span>
+					<a href="#">蜀ICP备15006450号-3</a>
+					<a href="#">营业执照</a>
+					<span class="fr">源码大数据股份有限公司©版权所有</span>
+				</p>
+			</footer>
+		
+		<!-- 引入粒子插件 -->
+		<script src="../lib/CanvasParticles/canvas-particle.js"></script>
+		<!-- 引入公共方法 -->
+		<script src="../asset/js/common.js"></script>
+		<!-- 引入当前文件js -->
+		<script src="../asset/js/APIDetails.js"></script>
+	</body>
+</html>

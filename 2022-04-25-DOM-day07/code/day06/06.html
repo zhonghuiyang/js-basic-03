@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>倒计时：<span>5</span>秒</h1>
+
+    <script>
+        let box=document.querySelector('span');
+        let i=5;
+        setInterval(function(){
+            i--;
+            box.innerText=i; //将时间输出到页面上
+
+            //当i=0时，跳转到淘宝
+            if(i===0){
+                location.href='https://www.taobao.com';
+            }
+        }, 1000);
+    </script>
+</body>
+</html>

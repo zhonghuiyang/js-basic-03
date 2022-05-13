@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <img src="../code/images/01.jpg" alt="">
+    </div>
+    <script>
+        document.querySelector('img').addEventListener('click',function(){
+            console.log('1.img事件触发了');
+
+        },true)
+        document.querySelector('div').addEventListener('click',function(){
+            console.log('2.div事件触发了');
+
+
+        },true)
+        document.body.addEventListener('click',function(){
+            console.log('3.body事件触发');
+
+
+        },true)
+        // 如果是true 整个从外到内 捕捉
+        // 如果是false 是从里到外  冒泡
+    </script>
+    
+</body>
+</html>
